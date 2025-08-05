@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #ffe0e9, #fad0c4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #mainContent {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .message {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      max-width: 700px;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    .krishna {
+      margin-top: 30px;
+    }
+
+    .krishna img {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    #surpriseBtn {
+      font-size: 1.5rem;
+      padding: 15px 35px;
+      background: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    #surpriseBtn:hover {
+      background: #d81b60;
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.5rem; }
+      .message { padding: 20px; font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button -->
+  <div id="startScreen">
+    <button id="surpriseBtn" onclick="revealSurprise()">🎁 Tap Here for a Birthday Surprise</button>
+  </div>
+
+  <!-- Hidden Content -->
+  <div id="mainContent">
+    <h1>Happy Birthday, Suhani Ji! 🎉</h1>
+
+    <div class="message">
+      <p>Dear Aastha,</p>
+      <p>
+        Aaj ka din khaas hai, kyunki is din ek bahut hi pyaari, kind-hearted, aur inspiring ladki is duniya mein aayi thi — tum! 🥹❤️
+      </p>
+      <p>
+        Tumhari muskurahat sabse pyaari hai, aur tumhara dil toh aur bhi zyada. Har saal tum aur bhi strong, smart aur beautiful banti ja rahi ho.
+      </p>
+      <p>
+        Aaj Krishna ji tumhe woh saari khushiyan de jo tum deserve karti ho. Tumhara har din khushiyon se bhara ho, jaise Vrindavan ki leelaayein. 🌸💫
+      </p>
+      <p>Wishing you laughter, love, and unlimited cake! 🎂</p>
+    </div>
+
+    <div class="krishna">
+      <img src="https://i.imgur.com/NvJVA6B.png" alt="Krishna Blessings" />
+      <p>Shri Krishna ka aashirwad sada tum par bana rahe 🙏</p>
+    </div>
+
+    <div class="footer">
+      Made with 💖 by Your Friend [Durgesh]
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bdaySong" loop>
+    <source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Script -->
+  <script>
+    function revealSurprise() {
+      document.getElementById('startScreen').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'flex';
+      document.getElementById('bdaySong').play();
+    }
+  </script>
+</body>
+</html>
